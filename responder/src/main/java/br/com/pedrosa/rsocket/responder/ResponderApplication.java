@@ -1,9 +1,9 @@
-package responder;
+package br.com.pedrosa.rsocket.responder;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.messaging.handler.annotation.MessageMapping;
@@ -22,14 +22,14 @@ public class ResponderApplication {
 	}
 }
 
-@Slf4j
+@Log4j2
 @Controller
 class GreetingsController {
 
 	@MessageMapping("greetings")
 	Flux<GreetingResponse> greet(GreetingRequest request) {
 		return Flux
-			.fromStream(generate(() -> new GreetingResponse("Hello " + request.getName() + " @ " + Instant.now().toString() + "!")))
+			.fromStream(generate(() -> new GreetingResponse("Rsocket " + request.getName() + " @ " + Instant.now().toString())))
 			.delayElements(Duration.ofSeconds(1));
 	}
 }

@@ -1,4 +1,4 @@
-package requester;
+package br.com.pedrosa.rsocket.requester;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -33,7 +33,7 @@ class GreetingClient {
 		requester
 			.route("greetings")
 			.metadata(this.client.forwarding("responder"))
-			.data(new GreetingRequest("World"))
+			.data(new GreetingRequest("Test Rocket"))
 			.retrieveFlux(GreetingResponse.class)
 			.subscribe(gr -> log.info("new message: " + gr.getMessage()));
 	}

@@ -1,4 +1,4 @@
-# Spring Cloud Gateway RSocket Example 
+# RSocket Example
 
 This example demonstrates a client and a service. Or, int he parlance of RSocket, a requester-responder. 
 

@@ -8,8 +8,8 @@
         <version>2.2.0.BUILD-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>org.springframework.cloud.rsocket</groupId>
-    <artifactId>spring-cloud-gateway-rsocket-sample</artifactId>
+    <groupId>br.com.pedrosa</groupId>
+    <artifactId>rsocket</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <properties>
@@ -47,10 +47,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
-        <!--<dependency>
-            <groupId>io.micrometer</groupId>
-            <artifactId>micrometer-registry-prometheus</artifactId>
-        </dependency>-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

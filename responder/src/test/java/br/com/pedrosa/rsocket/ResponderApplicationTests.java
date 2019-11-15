@@ -1,4 +1,4 @@
-package org.springframework.cloud.rsocket.sample.pong;
+package br.com.pedrosa.rsocket;
 
 import org.junit.Ignore;
 import org.junit.Test;

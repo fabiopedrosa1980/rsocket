@@ -1,4 +1,4 @@
-package org.springframework.cloud.rsocket.sample.ping;
+package br.com.pedrosa.rsocket;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
